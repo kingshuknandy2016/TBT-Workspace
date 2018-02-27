@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+
+	<bean id="vns" class="com.spi.idref.City">
+		<property name="cityName" value="Varanasi" />
+	</bean>
+
+	<!-- <bean id="student" class="com.spi.idref.Student"> <property name="city" 
+		ref="vns" /> <property name="name" value="Siddu"> </property> </bean> -->
+
+
+	<!-- <bean id="student" class="com.spi.idref.Student"> <property name="city" 
+		ref="vns" /> <property name="name" value="Siddu"> </property> </bean> -->
+
+	<!-- Idref Implementation, Its Substitute bean name at deployment time,If 
+		no bean exist it Throws an error -->
+
+
+	<bean id="stId" class="">
+		<property name="name" value="Siddu" />
+	</bean>
+
+	<bean id="student" class="com.spi.idref.Student">
+		<property name="city" ref="vns">
+		</property>
+
+		<property name="name">
+			<idref bean="stId" />
+		</property>
+
+	</bean>
+</beans>

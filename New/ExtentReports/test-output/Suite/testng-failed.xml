@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="none">
+  <test name="Test(failed)" parallel="none">
+    <classes>
+      <class name="com.spi.TC1">
+        <methods>
+          <include name="OpenAUT"/>
+          <include name="M1"/>
+        </methods>
+      </class> <!-- com.spi.TC1 -->
+      <class name="com.spi.TC2">
+        <methods>
+          <include name="M3"/>
+          <include name="M1"/>
+        </methods>
+      </class> <!-- com.spi.TC2 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

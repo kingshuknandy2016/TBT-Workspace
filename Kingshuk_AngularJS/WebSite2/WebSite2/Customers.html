@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="customerModule">
+<head>
+    <title></title>
+    <script src="LIB\angular.min.js"></script>
+    <script src="LIB\CustomerDetails.js"></script>
+</head>
+<body>
+
+<div ng-controller="customerController">
+  <ul ng-repeat="customers in customerObj|orderBy:'customerName'">
+            <li>{{customers.customerName |uppercase}}</li>
+        
+        
+            <li>{{customers.custId}}</li>
+            <li>{{customers.custLoc |lowercase}}</li>
+            <li>{{customers.Payment|currency}}</li>
+        </ul>
+
+
+</div>
+
+</body>
+</html>

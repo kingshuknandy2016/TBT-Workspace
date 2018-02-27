@@ -1,0 +1,8 @@
+<suite name="Suite" parallel="none">
+  <test name="Test">
+    <classes>
+      <class name="com.spi.TC1"/>
+      <class name="com.spi.TC2"/>
+    </classes>
+  </test> 
+</suite>

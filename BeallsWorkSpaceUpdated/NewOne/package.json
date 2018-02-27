@@ -1,0 +1,12 @@
+{
+  "name": "protractor-tests",
+  "version": "0.0.1",
+  "devDependencies": {
+    "protractor": "3.0.0",
+    "protractor-html-screenshot-reporter": "0.0.21",
+    "protractor-jasmine2-html-reporter": "0.0.6"
+  },
+  "scripts": {
+    "install": "node ./node_modules/protractor/bin/webdriver-manager update"
+  }
+}

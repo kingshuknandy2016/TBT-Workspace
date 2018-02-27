@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	
+	<!--  One way to configure Has-A relatioship -->
+
+<!-- 
+	<bean id="txtEditor" class="com.spi.beans.TextEditor">
+		<property name="spellchecker" ref="splcheck" ></property>
+	</bean>
+	
+	<bean id="splcheck" class="com.spi.beans.SpellChecker"/> 	
+	
+	 -->
+
+
+<!--  Second way to configure. -->
+	<bean id="txtEditor" class="com.spi.beans.TextEditor">
+		<property name="spellchecker">
+			<bean id="splcheck" class="com.spi.beans.SpellChecker"/>			
+		</property>
+	</bean>
+	
+	 <bean id="t1" class="com.spi.beans.Test" autowire="byName">	
+	 	
+	  
+	 </bean>
+	
+
+	 
+	
+</beans>
+               

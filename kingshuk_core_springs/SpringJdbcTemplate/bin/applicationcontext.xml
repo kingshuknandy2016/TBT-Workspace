@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<!-- <bean id="bn1" class="com.spi.beanpostprocessor.HelloWorld"> <property 
+		name="message" value="Hello"></property> </bean> <bean class="com.spi.beanpostprocessor.InitHelloWorld" 
+		/> -->
+
+
+	<bean id="empBean1" class="com.spi.constructordi.Employee">
+		<constructor-arg value="101" type="int" index="0"></constructor-arg>
+		<constructor-arg value="Hello" type="String" index="1"></constructor-arg>
+		<constructor-arg value="103" type="int" index="2"></constructor-arg>
+	</bean>
+
+
+	<bean id="empBean2" class="com.spi.constructordi.Employee">
+		<constructor-arg value="101" type="int"></constructor-arg>
+		<constructor-arg value="102" type="int"></constructor-arg>
+		<constructor-arg value="103"></constructor-arg>
+	</bean>
+
+
+	<!-- Constructor with 2 int type paratemeters -->
+	<bean id="empBean3" class="com.spi.constructordi.Employee">
+		<constructor-arg value="1" type="int"></constructor-arg>
+		<constructor-arg value="2" type="int"></constructor-arg>
+	</bean>
+
+	<!-- Constructor with 2 String types paratemeters -->
+	<bean id="empBean4" class="com.spi.constructordi.Employee">
+		<constructor-arg value="1"></constructor-arg>
+		<constructor-arg value="2"></constructor-arg>
+	</bean>
+
+	<!-- int age, char ch,String str,boolean flag,float f,double d -->
+
+	<bean id="empBean5" class="com.spi.constructordi.Employee">
+		<constructor-arg value="1" type="int"></constructor-arg>
+		<constructor-arg value="a" type="char"></constructor-arg>
+		<constructor-arg value="String" type="String"></constructor-arg>
+		<constructor-arg value="true" type="boolean"></constructor-arg>
+		<constructor-arg value="23.23f" type="float"></constructor-arg>
+		<constructor-arg value="343.34" type="double"></constructor-arg>
+	</bean>
+
+
+
+	<bean id="empBean6" class="com.spi.constructordi.Employee">
+		<constructor-arg value="343.34" type="Double" index="0"></constructor-arg>
+		<constructor-arg value="a" type="Character" index="1"></constructor-arg>
+		<constructor-arg value="String" type="String" index="2"></constructor-arg>
+		<constructor-arg value="true" type="Boolean" index="3"></constructor-arg>
+		<constructor-arg value="23.23f" type="Float" index="4"></constructor-arg>
+		<constructor-arg value="1" type="Integer" index="5"></constructor-arg>
+	</bean>
+
+
+
+</beans>
+               
+               

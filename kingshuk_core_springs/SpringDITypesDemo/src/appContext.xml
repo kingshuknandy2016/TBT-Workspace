@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" default-init-method="init" default-destroy-method="close"  >
+
+
+	<bean id="font" class="com.spi.di.types.Font">
+		<property name="id" value="1"></property>
+		<property name="fontname" value="BookAntika"></property>
+		<property name="fontstyle" value="Italic"></property>
+	</bean>
+
+
+	<bean id="txtId" class="com.spi.di.types.TextEditor">
+		<property name="id" value="10"></property>
+		<property name="name" value="Eclipse-IDE"></property>
+		<property name="font" ref="font"></property>
+	</bean>
+
+
+
+	<!-- Constructor(Name,int) -->
+	<bean id="constId" class="com.spi.di.constructor.ConstructorInjection">
+		<constructor-arg value="100" ></constructor-arg>
+		<constructor-arg value="Sidd"></constructor-arg>
+	</bean>
+
+	 <!-- Overloaded Constructor(int,String) -->
+	
+	<!-- 
+	<bean id="constId1" class="com.spi.di.constructor.ConstructorInjection">
+		<constructor-arg value="Sidd" type="java.lang.String"
+			index="1"></constructor-arg>
+		<constructor-arg value="100" type="int" index="0"></constructor-arg>
+	</bean>
+	-->
+
+
+
+	
+
+
+</beans>

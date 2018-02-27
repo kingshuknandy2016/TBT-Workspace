@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="31" started-at="2016-04-29T10:43:44Z" finished-at="2016-04-29T10:43:44Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="31" started-at="2016-04-29T10:43:44Z" finished-at="2016-04-29T10:43:44Z">
+      <class name="com.spi.basics.TestNGSimpleTest">
+        <test-method status="PASS" signature="testAdd()[pri:0, instance:com.spi.basics.TestNGSimpleTest@17d0578]" name="testAdd" duration-ms="16" started-at="2016-04-29T16:13:44Z" finished-at="2016-04-29T16:13:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAdd -->
+      </class> <!-- com.spi.basics.TestNGSimpleTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

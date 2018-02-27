@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+<!--  One Way,Withoouht Autowire -->
+<!-- 	
+	<bean id="cat" class="com.spi.beans.Categories" >	
+			<property name="name" value="Technical Books"></property>
+			<property name="bk" ref="bk"></property>
+	</bean>
+	
+	
+
+	<bean id="bk" class="com.spi.beans.Book">
+		<property name="bookname" value="Head First series"></property>
+		<property name="bookprice" value="450"></property>
+	</bean>
+
+ -->
+ 
+ 
+<!--  Autowire using byName,java bean property name must same as bead id in xml file. -->
+
+
+<!-- 
+	<bean id="cat" class="com.spi.beans.Categories" autowire="byName" >	
+			<property name="name" value="Technical Books"></property>		
+	</bean>	
+	
+
+	<bean id="bk" class="com.spi.beans.Book">
+		<property name="bookname" value="Head First series"></property>
+		<property name="bookprice" value="450"></property>
+	</bean>
+ -->
+
+   <!--  Java Properties can different from bean id at xml file. -->
+	<bean id="cat" class="com.spi.beans.Categories" autowire="byType" >	
+			<property name="name" value="Puzzle"></property> <!--  Optional,Since String is also an object that also gets creates -->	
+	</bean>
+	
+	<bean id="anthing" class="com.spi.beans.Book">
+		<property name="bookname" value="Head First series"></property>
+		<property name="bookprice" value="450"></property>
+	</bean>
+	
+	<!--  AutoWire, By Constructor. -->
+	
+	<bean id="addressId" class="com.spi.autowire.byconstructor.Address">
+	</bean>
+	
+	
+	<!-- autowire="autodetect",Not Supports by Spring 3.0 -->
+	<bean id="stId" class="com.spi.autowire.byconstructor.Student" autowire="constructor">
+		<property name="rollno" value="100"></property>
+		<property name="name" value="Ashwini"></property>
+	</bean>
+	
+	
+
+</beans>
+               

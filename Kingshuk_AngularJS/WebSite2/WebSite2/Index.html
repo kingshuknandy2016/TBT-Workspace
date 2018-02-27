@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+    <script src="LIB/angular-min.js" type="text/javascript"></script>
+    <script src="LIB/angular-route.js" type="text/javascript"></script>
+    <link href="LIB/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="LIB/SPADetails.js" type="text/javascript"></script>
+
+</head>
+<body  ng-controller="HomeController">
+    
+      <nav class="navbar navbar-default">
+         <div class="container">
+           <ul class="nav navbar-nav navbar-right">
+               <li><a href="#Home"> Home</a></li>
+               <li><a href="#Employee">Employee</a></li>
+               <li><a href="#Customer">Customer</a></li>
+           </ul>
+         
+         </div>
+      
+      
+      
+      </nav>
+<div id="div1">
+    <div ng-view>
+    
+    </div>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/POI 3.9"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/WD"/>
+	<classpathentry kind="lib" path="C:/Sandalone server/jxl.jar"/>
+	<classpathentry kind="lib" path="C:/Sandalone server/mail.jar"/>
+	<classpathentry kind="lib" path="C:/Sandalone server/poi-3.9.jar"/>
+	<classpathentry kind="lib" path="C:/Sandalone server/poi-ooxml-3.9.jar"/>
+	<classpathentry kind="lib" path="C:/Sandalone server/selenium-server-standalone-2.53.0.jar"/>
+	<classpathentry kind="lib" path="C:/Sandalone server/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Sandalone server/monte-screen-recorder-0.7.7.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_60">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

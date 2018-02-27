@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+
+<!--  One Way to do Date Object Creations,works but date value will be a null -->
+
+<!--  
+<bean id="date" class="java.util.Date"/>
+<bean id="obj"   class="com.spi.date.Implementor" autowire="byName">
+    <property name="username"><value>Abc</value></property>
+    <property name="password"><value>password</value></property>      
+</bean>
+ -->
+
+<!--  This works fine, Will take given date values will construct Date() Objects. --> 
+ 
+ <!--  
+<bean id="iDate" class="java.util.Date">
+	<constructor-arg value="115"></constructor-arg>
+	<constructor-arg value="06"></constructor-arg>
+	<constructor-arg value="29"></constructor-arg>
+</bean>
+
+<bean id="obj"  class="com.spi.date.Implementor" >
+    <property name="username"><value>Abc</value></property>
+    <property name="password"><value>password</value></property>
+    <property name="date" ref="iDate"></property>      
+</bean>
+
+ -->
+ 
+<bean id="iDate" class="java.util.Date">
+	<constructor-arg value="115">
+	</constructor-arg>
+	<constructor-arg value="06"></constructor-arg>
+	<constructor-arg value="29"></constructor-arg>
+</bean>
+
+<bean id="obj"  class="com.spi.date.Implementor" autowire="byType" >
+    <property name="username"><value>Abc</value></property>
+    <property name="password"><value>password</value></property>    
+</bean>
+
+
+
+
+<!--  Demo on Array Instance  -->
+<bean id="custId" class="com.spi.array.Customer">
+	<property name="address">
+		<array>
+			<ref bean="address"/>
+		</array>
+	</property>
+</bean>
+
+<bean id="address" class="com.spi.array.Address">	
+</bean>
+
+
+<bean id="manfuId" class="com.spi.manufacturer.Manufacturer">	
+	<property name="name" value="Reliance"></property>	
+	<property name="product">
+		<array>
+			<ref bean="pId1" />
+			<ref bean="pId2" />
+			<ref bean="pId3" />	
+		</array>
+	</property>
+</bean>
+
+<bean id="productId" class="com.spi.manufacturer.Product">
+	<property name="id" value="100"  ></property>
+	<property name="name" value="Mobile"></property>
+	<property name="launchdate" value="null"></property>
+</bean>
+
+
+<bean id="pId1" class="com.spi.manufacturer.Product">
+	<property name="id" value="100"  ></property>
+	<property name="name" value="Mobile"></property>
+	<property name="launchdate" value="null"></property>
+</bean>
+
+
+<bean id="pId2" class="com.spi.manufacturer.Product">
+	<property name="id" value="101"  ></property>
+	<property name="name" value="Home appliance"></property>
+	<property name="launchdate" value="null"></property>
+</bean>
+
+
+<bean id="pId3" class="com.spi.manufacturer.Product">
+	<property name="id" value="103"  ></property>
+	<property name="name" value="Software"></property>
+	<property name="launchdate" value="null"></property>
+</bean>
+
+
+</beans>

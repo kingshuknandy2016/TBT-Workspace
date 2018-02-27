@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--  
+ xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" >
+
+	<bean id="aId" class="com.spi.checkbean.creation.A">
+		<property name="id" value="100"></property>
+		<property name="name" value="Sidd"></property>
+		<property name="address" value="HH"></property>
+	</bean>
+
+ 
+	<bean id="bId" class="com.spi.checkbean.creation.B" lazy-init="true" >
+		<property name="id" value="100"></property>
+		<property name="name" value="Sidd"></property>
+		<property name="address" value="HH"></property>
+	</bean>
+	
+	
+	
+	<bean class="com.spi.checkbean.creation.A1" id="id" name="s1,s2,s3">
+		<property name="b1" ref="b1"></property>		
+	</bean>
+
+	<bean id="b1" class="com.spi.checkbean.creation.B1">
+		<property name="c1" ref="c1"></property>		
+	</bean>
+	
+	<bean  id="c1" class="com.spi.checkbean.creation.C1">
+		<property name="c" value="C-Class"></property>		
+	</bean>	
+	
+	
+	
+</beans>

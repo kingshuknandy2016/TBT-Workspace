@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<!--  AutoWire=no -->
+	<bean id="eId" class="com.spi.autowire.Employee" autowire="byName">
+		<property name="firstname" value="Sid"></property>
+		<property name="lastname" value="H"></property>
+		<property name="address" ref="addressId"></property>		
+	</bean>
+
+	<bean id="addressId" class="com.spi.autowire.Address">
+		<property name="doorno" value="#181/B"></property>
+	</bean>
+	
+	<bean id="eId1" class="com.spi.autowire.Employee" autowire="byName">
+		<property name="firstname" value="Sid"></property>
+		<property name="lastname" value="H"></property>
+	</bean>
+
+	<!-- below id,bean id must be a same as Java instance variable name. -->
+	<bean id="address" class="com.spi.autowire.Address">
+		<property name="doorno" value="#181/B"></property>
+	</bean>	
+
+	<bean id="eId2" class="com.spi.autowire.Employee" autowire="byType">
+		<property name="firstname" value="Sid"></property>
+		<property name="lastname" value="H"></property>
+	</bean>
+
+	<!-- below id,bean id must be a same as Java instance variable name. -->
+	<bean id="address1" class="com.spi.autowire.Address">
+		<property name="doorno" value="#181/B"></property>
+	</bean>
+
+	<bean id="eId3" class="com.spi.autowire.Employee" autowire="constructor">
+		<property name="firstname" value="Sid"></property>
+		<property name="lastname" value="H"></property>
+	</bean>
+
+	<!-- below id,bean id must be a same as Java instance variable name. -->
+	<bean id="address2" class="com.spi.autowire.Address">
+		<property name="doorno" value="#181/B"></property>
+	</bean>	
+
+
+</beans>

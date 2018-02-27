@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/CDC-1.1%Foundation-1.1"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/ExtendedReLibrary"/>
+	<classpathentry kind="lib" path="C:/WorkSpace/New/POMFinalframework/JarLibraries/MonteScreenRecorder.jar"/>
+	<classpathentry kind="lib" path="C:/WorkSpace/New/POMFinalframework/JarLibraries/poi-3.9.jar"/>
+	<classpathentry kind="lib" path="C:/WorkSpace/New/POMFinalframework/JarLibraries/poi-ooxml-3.9.jar"/>
+	<classpathentry kind="lib" path="C:/WorkSpace/New/POMFinalframework/JarLibraries/extentreports-java-v2.40.2/extentreports-java-2.40.2.jar"/>
+	<classpathentry kind="lib" path="C:/WorkSpace/New/POMFinalframework/JarLibraries/extentreports-java-v2.40.2/lib/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="C:/WorkSpace/New/POMFinalframework/JarLibraries/extentreports-java-v2.40.2/lib/jsoup-1.8.3.jar"/>
+	<classpathentry kind="lib" path="C:/WorkSpace/New/POMFinalframework/JarLibraries/extentreports-java-v2.40.2/lib/sqlite-jdbc-3.8.11.1.jar"/>
+	<classpathentry kind="lib" path="C:/WorkSpace/New/POMFinalframework/JarLibraries/selenium-server-standalone-2.53.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
